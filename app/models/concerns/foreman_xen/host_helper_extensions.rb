@@ -10,6 +10,8 @@ module ForemanXen
               if not host.compute_resource.nil? and host.compute_resource.type =="ForemanXen::Xenserver"
                 link_to(_("Snapshots"), "../foreman_xen/snapshots/#{@host.id}/",
                         :title    => _("Manage machine snapshots"))
+                link_to(_("Mirgate"), "../foreman_xen/mirgate/#{@host.id}/",
+                        :title    => _("Migrate vm to hypervisor"))
               end,
               if host.build
                 link_to_if_authorized(_("Cancel build"), hash_for_cancelBuild_host_path(:id => host).merge(:auth_object => host, :permission => 'build_hosts'),

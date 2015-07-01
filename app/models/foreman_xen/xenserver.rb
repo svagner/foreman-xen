@@ -249,7 +249,7 @@ module ForemanXen
       vm = client.servers.new :name               => args[:name],
                               :affinity           => host,
                               :pv_bootloader      => '',
-                              :hvm_boot_params    => { :order => 'dnc' },
+                              :hvm_boot_params    => { :order => 'nc' },
                               :other_config       => other_config,
                               :memory_static_max  => mem_max,
                               :memory_static_min  => mem_min,

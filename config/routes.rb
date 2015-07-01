@@ -7,6 +7,8 @@ Rails.application.routes.draw do
     match 'snapshots/:id/delete/:ref', :to => 'snapshots#destroy', :via => 'get'
 
     match 'snapshots/:id/create', :to => 'snapshots#create', :via => 'post'
+
+    match 'migrate/:id', :to => 'migrate#show', :via => 'get'
   end
 
 end
