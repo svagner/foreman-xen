@@ -1,5 +1,5 @@
 module ForemanXen
-  class MirgateController < ::ApplicationController
+  class MigrateController < ::ApplicationController
     helper :all
     skip_before_filter  :verify_authenticity_token
 
